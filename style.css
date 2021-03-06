@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    background: #F3F3F3;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Helpers */
+.text-center{
+    text-align: center;
+}
+
+.header-primary{
+    background: #fff;
+    padding: 1rem 4rem;
+}
+
+section{
+    padding: 0 4rem;
+}
+
+#title-page{
+    position: relative;
+    display: inline-block;
+    font-weight: 900;
+    margin-top: 6rem;
+    text-align: center;
+    font-size: 2.15rem;
+}
+
+#title-page::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 120px;
+    background: #E0E0E0;
+    left: -160px;
+    top: 50%;
+}
+
+#title-page::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 120px;
+    background: #E0E0E0;
+    right: -160px;
+    top: 50%;
+}
+
+.grid{
+    max-height: 200px;
+    overflow: hidden;
+}
