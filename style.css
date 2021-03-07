@@ -1,3 +1,9 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
 body{
     margin: 0;
     background: #F3F3F3;
@@ -51,6 +57,82 @@ section{
 }
 
 .grid{
-    max-height: 200px;
-    overflow: hidden;
+    display: grid;
+    grid-template: 150px 150px / repeat(auto-fill, minmax(285px, 1fr));
+    grid-gap: 12px;
+}
+
+/* Card */
+.card{
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.card h4{
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.15rem
+}
+
+.card img{
+    width: 80px;
+    object-fit: contain;
+    max-height: 100%;
+}
+
+.grid-item{
+    text-align: center;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#grid-item-primary{
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+#grid-item-primary .grid-primary{
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;   
+    grid-gap: 12px;
+}
+
+.grid-primary .grid-item img{
+    width: 100%;
+}
+
+
+.grid-secondary{
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+}
+
+/* 1px > 768px */
+@media screen and (max-width: 768px) {
+    .header-primary{
+        padding: 1rem 1rem;
+    }
+    
+    section{
+        padding: 0 1rem 3rem 1rem;
+    }
+
+    #title-page{
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+
+    #title-page::before{
+        width: 40px;
+        left: -50px;
+    }
+    
+    #title-page::after{
+        width: 40px;
+        right: -55px;
+    }
 }
